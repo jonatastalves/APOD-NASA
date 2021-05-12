@@ -1,9 +1,62 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <h1>APOD - Nasa</h1>
-                
+<html lang="pt-BR">
 
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>APOD - Nasa</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="titulo-header">APOD - Astronomy Picture Of The Day</h1>
+  </header>
+  <main>
+    <div class="container">
+      
+<!-- div responsável pelas informações dos formulários de busca  -->
+      
+      <div class="form-info">
+        <form class="formulario" action="">
+          <label class="data-da-imagem" for="data-da-imagem">Escolha a data e veja a foto do dia!</label>
+          <input class="elementos-form" type="date" name="data-da-imagem" id="input-data" />
+          <button id="botao-data" class="elementos-form" type="submit">
+            Enviar
+          </button>
+        </form>
+      </div>
+
+      <div class="informacoes">
+        <h1 class="titulo" id="titulo"></h1>
+        <h2 class="data" id="data"></h2>
+        <p class="descricao" id="descricao"></p>
+      </div>
+
+<!-- div responsável pelas informações da API (Imagens)  -->
+
+      <div class="imagem">
+        <img id="foto" class="img-nasa" src="" alt="foto" />
+      </div>
+      <div class="imagem video">
+        <iframe id="video" class="img-nasa" src="" frameborder="0"></iframe>
+      </div>
+
+<!-- div responsável pelas informações de Erro -->
+
+    </div>
+    <div class="descricao erro oculto">
+      <h1 class="erro">404</h1>
+      <p>Não encontramos sua página</p>
+      <button class="botao-erro">Clique para recarregar</button>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>Desenvolvido por Jônatas Torres</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/js-jquery.js"></script>
+</body>
 
 </html>
